@@ -1,26 +1,41 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@theme {
+  /* === Fonts === */
+  --font-poppins: 'Poppins', ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  /* === Semantic Colors === */
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+
+  /* === Accent Color === */
+  --color-accent: #f6339a;
+
+  /* === Rag Theme === */
+  --color-primary: #0f172a;
+  --color-secondary: #1e293b;
+  --color-text-primary: #f8fafc;
+  --color-text-secondary: #94a3b8;
+  --bg-gradient: linear-gradient(95.17deg, #1A1A2E -2.33%, #302B63 108.93%);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* === No Rag THEME === */
+[data-theme="rag-off"] {
+  --color-primary: #ffffff;
+  --color-secondary: #f8fafc;
+  --color-text-primary: #0f172a;
+  --color-text-secondary: #64748b;
+
+  --bg-gradient: linear-gradient(96.13deg, #667EEA -11.38%, #F093FB 97.89%);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.bg-gradient {
+  background: var(--bg-gradient);
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.button-shadow {
+  box-shadow: -0.2px 1.6px 0 0 #8c8888, inset 1px 1px 15px -8px  #fffffff0;
 }
