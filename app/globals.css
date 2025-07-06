@@ -7,29 +7,30 @@
   --font-poppins: 'Poppins', ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
   /* === Semantic Colors === */
-  --color-success: #10b981;
-  --color-warning: #f59e0b;
-  --color-error: #ef4444;
+  --color-success: #22c55e;   /* emerald-500 */
+  --color-warning: #eab308;   /* yellow-500 */
+  --color-error: #ef4444;     /* red-500 */
 
   /* === Accent Color === */
-  --color-accent: #f6339a;
+  --color-accent: #ff4ecd;    /* vibrant pink-violet */
 
-  /* === Rag Theme === */
-  --color-primary: #0f172a;
-  --color-secondary: #1e293b;
-  --color-text-primary: #f8fafc;
-  --color-text-secondary: #94a3b8;
-  --bg-gradient: linear-gradient(95.17deg, #1A1A2E -2.33%, #302B63 108.93%);
+  /* === Dark Theme === */
+  --color-primary: #0f172a;        /* slate-900 */
+  --color-secondary: #1e293b;      /* slate-800 */
+  --color-text-primary: #f1f5f9;   /* slate-100 */
+  --color-text-secondary: #94a3b8; /* slate-400 */
+
+  --bg-gradient: linear-gradient(120deg, #1a1a2e, #2c3e50, #1e1e2f);
 }
 
 /* === No Rag THEME === */
 [data-theme="rag-off"] {
-  --color-primary: #ffffff;
-  --color-secondary: #f8fafc;
-  --color-text-primary: #0f172a;
-  --color-text-secondary: #64748b;
+  --color-primary: #bcb3f3;
+  --color-secondary: #f1f5f9;      /* slate-100 */
+  --color-text-primary: #0f172a;   /* slate-900 */
+  --color-text-secondary: #64748b; /* slate-500 */
 
-  --bg-gradient: linear-gradient(96.13deg, #667EEA -11.38%, #F093FB 97.89%);
+  --bg-gradient: linear-gradient(135deg, #33587c 0%, #b2dce9 100%);
 }
 
 .bg-gradient {
@@ -37,5 +38,5 @@
 }
 
 .button-shadow {
-  box-shadow: -0.2px 1.6px 0 0 #8c8888, inset 1px 1px 15px -8px  #fffffff0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
