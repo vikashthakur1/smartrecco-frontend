@@ -12,13 +12,13 @@
   --color-error: #ef4444;     /* red-500 */
 
   /* === Accent Color === */
-  --color-accent: #ff4ecd;    /* vibrant pink-violet */
+  --color-accent: #ff4ecd;    
 
   /* === Dark Theme === */
-  --color-primary: #0f172a;        /* slate-900 */
-  --color-secondary: #1e293b;      /* slate-800 */
-  --color-text-primary: #f1f5f9;   /* slate-100 */
-  --color-text-secondary: #94a3b8; /* slate-400 */
+  --color-primary: #0f172a;        
+  --color-secondary: #1e293b;      
+  --color-text-primary: #f1f5f9;   
+  --color-text-secondary: #94a3b8; 
 
   --bg-gradient: linear-gradient(120deg, #1a1a2e, #2c3e50, #1e1e2f);
 }

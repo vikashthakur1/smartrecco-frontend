@@ -9,6 +9,7 @@ function Navbar() {
       <p className="font-mono text-accent text-2xl font-semibold tracking-wide [text-shadow:1px_1px_0_rgb(255_255_255/_0.3)]">
         SmartRecco
       </p>
+      <div className="flex item-center gap-4">
       <button
         className="bg-text-secondary text-secondary text-lg font-semibold tracking-wider px-4 py-1 rounded-full shadow-lg border border-white/50 cursor-pointer font-poppins"
         onClick={toggleTheme}
@@ -17,8 +18,8 @@ function Navbar() {
         <span
           className={`${
             isRagOn
-              ? "text-accent/60 [text-shadow:_0_0_3px_#f6339a]"
-              : "text-white/60 [text-shadow:_0_0_3px_#fff]"
+              ? "text-accent/50 [text-shadow:_0_0_1px_#f6339a]"
+              : "text-white/50 [text-shadow:_0_0_1px_#fff]"
           }`}
         >
           {isRagOn ? "ON" : "OFF"}
@@ -27,6 +28,7 @@ function Navbar() {
       <button className="bg-primary text-text-secondary text-lg px-4 py-1 rounded-full cursor-pointer font-medium shadow-sm font-poppins">
         Logout
       </button>
+      </div>
     </nav>
   );
 }

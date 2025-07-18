@@ -1,14 +1,12 @@
 "use client";
 import { useState } from "react";
 import PromptButtons from "./PromptButtons";
-const InputForm = () => {
+const InputForm = ({questionSubmitHandler, error, loading}) => {
   const [inputValue, setInputValue] = useState("");
-  const submitQuestion = () => {
-    console.log(inputValue);
-  };
+  
 
-  const promptClick = (promptText) => {
-    setInputValue(promptText);
+  const promptClick = (inputStr) => {
+    setInputValue(inputStr);
   };
   return (
     <section className="mt-5 justify-center items-center">
@@ -21,12 +19,15 @@ const InputForm = () => {
           className="bg-transparent w-full text-text-primary placeholder:text-text-secondary placeholder:tracking-wider outline-none text-lg"
         />
         <button
-          onClick={submitQuestion}
+          onClick={()=> questionSubmitHandler(inputValue)}
           className="ml-4 text-lg font-semibold text-accent tracking-wide hover:brightness-110 transition-all cursor-pointer ease-in-out duration-300"
         >
-          Search
+          {loading ? "Searching..." : "Search"}
         </button>
       </div>
+      {error && (
+        <p className="mt-4 text-error text-base tracking-wide italic">*{error}</p>
+      )}
       <PromptButtons promptClick={promptClick} />
     </section>
   );
